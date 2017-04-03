@@ -15,6 +15,7 @@ tmpfs           7,3G     0  7,3G   0% /dev/shm
 /dev/xvdf1       37G   48M   37G   1% /data/1
 /dev/xvdg1       37G   48M   37G   1% /data/2
 ```
+### If you have ext-based volumes, list the reserve space setting XFS volumes do not support reserve space
 
 ### Disable transparent hugepage support
 
@@ -49,8 +50,31 @@ title CentOS-6.5-x86_64-GA-03 2.6.32-431.el6.x86_64
        valid_lft forever preferred_lft forever
 ```
 
-Show correct forward and reverse host lookups
-For /etc/hosts, use getent
-For DNS, use nslookup
-Show the nscd service is running
-Show the ntpd service is running
+### Show correct forward and reverse host lookups
+#### For /etc/hosts, use getent
+
+```sh
+[root@ip-172-31-11-207 ~]# getent hosts ec2-34-204-48-12.compute-1.amazonaws.com
+172.31.11.207   ec2-34-204-48-12.compute-1.amazonaws.com
+```
+#### For DNS, use nslookup
+```sh
+[root@ip-172-31-11-207 ~]# nslookup ec2-34-204-48-12.compute-1.amazonaws.com
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ec2-34-204-48-12.compute-1.amazonaws.com
+Address: 172.31.11.207
+```
+
+### Show the nscd service is running
+```sh
+[root@ip-172-31-11-207 ~]# getent hosts ec2-34-204-48-12.compute-1.amazonaws.com
+172.31.11.207   ec2-34-204-48-12.compute-1.amazonaws.com
+```
+### Show the ntpd service is running
+```sh
+[root@ip-172-31-11-207 ~]# service ntpd status
+ntpd (pid  1038) is running...
+```
