@@ -1,0 +1,9 @@
+```sh
+[centos@ip-172-31-5-105 ~]$ ls -lah /var/www/html/cdh5/parcels/latest/
+total 1,5G
+drwxr-xr-x. 2 root root 4,0K Abr  3 22:04 .
+drwxr-xr-x. 3 root root   19 Abr  3 21:59 ..
+-rw-r--r--. 1 root root   41 Mar 28 15:06 CDH-5.10.1-1.cdh5.10.1.p0.10-el6.parcel.sha1
+-rw-r--r--. 1 root root 1,5G Mar 28 15:07 CDH-5.10.1-1.cdh5.10.1.p0.10-el7.parcel
+-rw-r--r--. 1 root root  64K Mar 28 15:07 manifest.json
+```
