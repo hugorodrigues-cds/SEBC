@@ -1,14 +1,14 @@
 ### Check vm.swappiness on all your nodes
 
 ```sh 
-[root@ip-172-31-5-105 yum.repos.d]# cat /proc/sys/vm/swappiness
+[root@ip-172-31-5-105 ~]# cat /proc/sys/vm/swappiness
 10
 ```
 ### Show the mount attributes of your volume(s)
 
 
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# df -h
+[root@ip-172-31-5-105 ~]# df -h
 Sist. Arq.      Tam. Usado Disp. Uso% Montado em
 /dev/xvda1       80G  3,6G   77G   5% /
 devtmpfs        7,3G     0  7,3G   0% /dev
@@ -23,7 +23,7 @@ tmpfs           1,5G     0  1,5G   0% /run/user/1000
 ### Disable transparent hugepage support
 
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# cat /boot/grub/grub.conf
+[root@ip-172-31-5-105 ~]# cat /boot/grub/grub.conf
 default=0
 timeout=0
 
@@ -51,7 +51,7 @@ always madvise [never]
 ### List your network interface configuration
 
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# ip addr
+[root@ip-172-31-5-105 ~]# ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -70,12 +70,12 @@ always madvise [never]
 #### For /etc/hosts, use getent
 
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# getent hosts ec2-54-197-159-209.compute-1.amazonaws.com
+[root@ip-172-31-5-105 ~]# getent hosts ec2-54-197-159-209.compute-1.amazonaws.com
 172.31.1.146    ec2-54-197-159-209.compute-1.amazonaws.com
 ```
 #### For DNS, use nslookup
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# nslookup ec2-54-197-159-209.compute-1.amazonaws
+[root@ip-172-31-5-105 ~]# nslookup ec2-54-197-159-209.compute-1.amazonaws
 .com
 Server:         172.31.0.2
 Address:        172.31.0.2#53
@@ -87,7 +87,7 @@ Address: 172.31.1.146
 
 ### Show the nscd service is running
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# systemctl status nscd
+[root@ip-172-31-5-105 ~]# systemctl status nscd
                                                                                                                                                                               ● nscd.service - Name Service Cache Daemon
    Loaded: loaded (/usr/lib/systemd/system/nscd.service; enabled; vendor preset: disabled)
    Active: active (running) since Ter 2017-04-04 00:08:38 UTC; 25min ago
@@ -109,7 +109,7 @@ Abr 04 00:08:57 ip-172-31-5-105.ec2.internal nscd[561]: 561 checking for monitor
 ```
 ### Show the ntpd service is running
 ```sh
-[root@ip-172-31-5-105 yum.repos.d]# systemctl status ntpd
+[root@ip-172-31-5-105 ~]# systemctl status ntpd
 ● ntpd.service - Network Time Service
    Loaded: loaded (/usr/lib/systemd/system/ntpd.service; enabled; vendor preset: disabled)
    Active: active (running) since Ter 2017-04-04 00:37:31 UTC; 7s ago
