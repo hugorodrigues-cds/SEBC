@@ -41,8 +41,6 @@ select cpu_system_rate + cpu_user_rate where category=ROLE and serviceName=$SERV
 * Gateway
 
 ### What steps must be completed before integrating Cloudera Manager with Kerberos?
+you must configure TLS encryption between Cloudera Manager Server and all cluster hosts with encrypted communications between a Web browser and Cloudera Manager, and between Agents and Cloudera Manager.
+You need to have a MIT Kerberos KDC configured.
 
-* Level 0 
-
-
-* Level 1
