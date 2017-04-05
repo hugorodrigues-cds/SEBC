@@ -31,5 +31,5 @@
 ### Chek Hive (API v14)
 
 ```sh
-
+curl -u hugorodrigues-cds:cloudera -X POST 'http://ip-172-31-5-105.ec2.internal:7180/api/v14/clusters/hugorodrigues-cds/services/hive'
 ```
