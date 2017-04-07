@@ -48,3 +48,20 @@ mariadb                                                                      Mar
 updates/7/x86_64                                                             CentOS-7 - Updates                                                              1,126
 repolist: 10,822
 ```
+
+### List the /etc/passwd entries for neymar and ronaldo
+```sh
+[root@ip-172-31-5-109 ~]# cat /etc/passwd | grep neymar
+neymar:x:2010:2010::/home/neymar:/bin/bash
+[root@ip-172-31-5-109 ~]# cat /etc/passwd | grep ronaldo
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+```
+
+### List the /etc/group entries for barca and merengues
+
+```sh
+[root@ip-172-31-2-90 ~]# cat /etc/group | grep merengues
+merengues:x:2020:neymar
+[root@ip-172-31-2-90 ~]# cat /etc/group | grep barca
+barca:x:2026:ronaldo
+```
